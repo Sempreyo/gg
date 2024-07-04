@@ -1,0 +1,15 @@
+/* Libs */
+@import "./../../node_modules/swiper/swiper";
+@import "libs/aos.css";
+
+/* Base */
+@import "base/var";
+@import "base/mixin";
+@import "base/fonts";
+@import "base/animation";
+@import "base/global";
+@import "blocks/container";
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/footer";
