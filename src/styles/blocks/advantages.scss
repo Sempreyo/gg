@@ -1,0 +1,34 @@
+.advantages {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 60px;
+		width: 100%;
+		height: 60px;
+		padding: 14px;
+		background-color: $color-button;
+		border-radius: 50%;
+		box-shadow: 0 7px 31px rgba(243, 152, 0, 0.69);
+		overflow: hidden;
+
+		svg {
+			color: $white;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 1.2;
+		letter-spacing: -0.04em;
+	}
+}

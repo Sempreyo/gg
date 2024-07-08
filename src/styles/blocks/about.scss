@@ -1,0 +1,42 @@
+.about {
+	$parent: &;
+
+	padding: 30px 0 40px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 70px;
+	}
+
+	&__left {
+		min-width: 403px;
+		max-width: 403px;
+	}
+
+	&__right {
+		width: 100%;
+	}
+
+	&__articles {
+		display: flex;
+		flex-direction: column;
+		gap: 44px;
+	}
+
+	&__solutions {
+		margin-top: 51px;
+	}
+
+	&__accordion + #{$parent}__accordion {
+		margin-top: 97px;
+	}
+
+	&__accordion:nth-child(2) {
+		margin-top: 8px;
+	}
+
+	&__materials {
+		margin-top: 74px;
+	}
+}

@@ -26,6 +26,7 @@ dd {
 html {
 	font-size: 16px;
 	line-height: 1.2;
+	letter-spacing: -0.03em;
 	font-weight: 400;
 	-moz-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -40,8 +41,8 @@ body {
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	font-family: $mainFont;
-	background-color: $white;
-	color: $black;
+	background-color: $color-background;
+	color: $white;
 
 	/* iOS fix */
 	-webkit-font-smoothing: antialiased;
@@ -52,13 +53,12 @@ body {
 }
 
 main {
-	overflow: hidden;
 	position: relative;
 	z-index: 1;
 }
 
 a {
-	color: $black;
+	color: $white;
 	text-decoration: none;
 }
 
@@ -118,5 +118,35 @@ textarea {
 
 	@include min(ti) {
 		display: block !important;
+	}
+}
+
+/* Swiper */
+.swiper-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	width: 100%;
+}
+
+.swiper-btn-prev,
+.swiper-btn-next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgba(0, 104, 183, 0.63);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: rgba(0, 104, 183, 0.5);
+	}
+
+	svg {
+		color: $white;
 	}
 }

@@ -1,3 +1,34 @@
 .header {
 	$parent: &;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 48px 0 20px;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__logo,
+	&__logo-cn {
+		svg {
+			color: $white;
+		}
+	}
+
+	&__logo svg {
+		width: 164px;
+		height: 48px;
+	}
+
+	&__logo-cn svg {
+		width: 102px;
+		height: 29px;
+	}
 }

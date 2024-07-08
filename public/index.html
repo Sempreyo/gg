@@ -9,9 +9,286 @@
     <title>G&amp;G</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="container header__container"><a class="header__logo" href="#">
+          <svg>
+            <use xlink:href="./images/sprite.svg#logo-1"></use>
+          </svg></a><a class="header__logo-cn" href="#">
+          <svg>
+            <use xlink:href="./images/sprite.svg#logo-2"></use>
+          </svg></a></div>
+    </header>
     <main class="main">
-      <section class="hero"></section>
+      <section class="hero">
+        <div class="hero__bg">
+          <picture>
+            <source srcset="./images/bg.webp 1x, ./images/bg@2x.webp 2x" type="image/webp">
+            <source srcset="./images/bg.webp 1x, ./images/bg@2x.webp 2x" type="image/webp"><img src="./images/bg.jpg" srcset="./images/bg.jpg 1x, ./images/bg@2x.jpg 2x">
+          </picture>
+        </div>
+        <div class="container hero__container">
+          <div class="hero__left">
+            <h1 class="hero__title">Без айсбергов в печати с <span>G&G</span></h1>
+            <div class="hero__description">
+              G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные материалы и
+              профессиональные решения для печати более чем 200 миллионам потребителей в более чем 170 странах. <br>
+              История компании началась в 2000 году с идеи предложить потребителям высококачественную альтернативу дорогим
+              оригинальным расходным материалам.
+            </div>
+          </div>
+          <div class="hero__advantages">
+            <div class="advantages">
+              <div class="advantages__icon">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#adv-1"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <div class="advantages__title">Высокое качество:</div>
+                <div class="advantages__text">компания использует только качественные материалы и технологии для производства своей продукции</div>
+              </div>
+            </div>
+            <div class="advantages">
+              <div class="advantages__icon">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#adv-2"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <div class="advantages__title">Экологичность:</div>
+                <div class="advantages__text">G&G заботится об окружающей среде и использует экологически чистые материалы</div>
+              </div>
+            </div>
+            <div class="advantages">
+              <div class="advantages__icon">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#adv-3"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <div class="advantages__title">Инновации:</div>
+                <div class="advantages__text">компания постоянно внедряет новые технологии и разрабатывает инновационные продукты.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container about__container">
+          <div class="about__left">
+            <div class="about__articles">
+              <div class="article">
+                <div class="article__title">Название первой статьи, написанное в две строки</div>
+                <div class="article__text">
+                  G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
+                  материалы и профессиональные решения для печати более чем 200 миллионам потребителей
+                </div>
+                <button class="button article__link"><span>Читать полностью</span></button>
+              </div>
+              <div class="article">
+                <div class="article__title">Название первой статьи, написанное в две строки</div>
+                <div class="article__text">
+                  G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
+                  материалы и профессиональные решения для печати более чем 200 миллионам потребителей
+                </div>
+                <button class="button article__link"><span>Читать полностью</span></button>
+              </div>
+            </div>
+            <div class="about__solutions solutions">
+              <div class="solutions__title">Лучшие решения</div>
+              <div class="solutions__wrapper">
+                <div class="solutions__nav swiper-nav">
+                  <div class="swiper-btn-prev">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#chevron-left"></use>
+                    </svg>
+                  </div>
+                  <div class="swiper-btn-next">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="solutions__slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/1.webp 1x, ./images/solutions/1@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/1.webp 1x, ./images/solutions/1@2x.webp 2x" type="image/webp"><img src="./images/solutions/1.jpg" srcset="./images/solutions/1.jpg 1x, ./images/solutions/1@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">СЕРИЯ JUMBO</div>
+                      <div class="solution-card__text">
+                        В основе серии Jumbo лежит стремление обеспечить исключительную производительность и эффективность. <br>
+                        Благодаря удвоению ресурса по сравнению со стандартными картриджами серия Jumbo гарантирует, что предприятия
+                        смогут печатать больше, при этом значительно снижая стоимость одного отпечатка.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/2.webp 1x, ./images/solutions/2@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/2.webp 1x, ./images/solutions/2@2x.webp 2x" type="image/webp"><img src="./images/solutions/2.jpg" srcset="./images/solutions/2.jpg 1x, ./images/solutions/2@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">СЕРИЯ DUAL-ECO</div>
+                      <div class="solution-card__text">
+                        Экономичный выбор: струйные картриджи Dual-Eco имеют большую емкость чернил, что позволяет печатать в два
+                        раза больше страниц по сравнению с оригинальными картриджами. <br>
+                        Если взять в качестве примера замену Epson T9451, Dual-Eco от G&G может сэкономить до 73% стоимости одного отпечатка.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/3.webp 1x, ./images/solutions/3@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/3.webp 1x, ./images/solutions/3@2x.webp 2x" type="image/webp"><img src="./images/solutions/3.jpg" srcset="./images/solutions/3.jpg 1x, ./images/solutions/3@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">ТОНЕР-КАРТРИДЖИ ДЛЯ <br> ПРОИЗВОДИТЕЛЬНЫХ МФУ ФОРМАТА А3</div>
+                      <div class="solution-card__text">
+                        Производительные устройства А3 формата в основном предназначены для рынка MPS и крупных предприятий. <br>
+                        У них более высокие требования к патентной безопасности и экологичности.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/4.webp 1x, ./images/solutions/4@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/4.webp 1x, ./images/solutions/4@2x.webp 2x" type="image/webp"><img src="./images/solutions/4.jpg" srcset="./images/solutions/4.jpg 1x, ./images/solutions/4@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">КАРТРИДЖИ ДЛЯ СТРУЙНЫХ ШИРОКОФОРМАТНЫХ УСТРОЙСТВ</div>
+                      <div class="solution-card__text">
+                        G&G на протяжение всей своей истории ведет исследовательскую работу и внедряет инновации, с помощью
+                        R&D расширяя линейку своей продукции для использования в широкоформатных струйных машинах.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/5.webp 1x, ./images/solutions/5@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/5.webp 1x, ./images/solutions/5@2x.webp 2x" type="image/webp"><img src="./images/solutions/5.jpg" srcset="./images/solutions/5.jpg 1x, ./images/solutions/5@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">ТОНЕР-КАРТРИДЖИ ДЛЯ ЦВЕТНЫХ ЛАЗЕРНЫХ УСТРОЙСТВ</div>
+                      <div class="solution-card__text">
+                        G&G выбрал путь эксперта в цвете. Технология Color Control, созданная инженерами G&G, обеспечивает идеальный
+                        баланс между точным дизайном продукта, тщательным отбором сырья, строгим производственным контролем,
+                        соблюдением требований безопасности и надежной цепочкой поставок.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                    <div class="swiper-slide solution-card"><a class="solution-card__link" href="#" target="_blank"></a>
+                      <div class="solution-card__image">
+                        <picture>
+                          <source srcset="./images/solutions/6.webp 1x, ./images/solutions/6@2x.webp 2x" type="image/webp">
+                          <source srcset="./images/solutions/6.webp 1x, ./images/solutions/6@2x.webp 2x" type="image/webp"><img src="./images/solutions/6.jpg" srcset="./images/solutions/6.jpg 1x, ./images/solutions/6@2x.jpg 2x">
+                        </picture>
+                      </div>
+                      <div class="solution-card__title">ЛАЗЕРНЫЕ УСТРОЙСТВА G&G</div>
+                      <div class="solution-card__text">
+                        Лазерные принтеры G&G имеют прочный внутренний металлический каркас, обеспечивающий
+                        устойчивость и долговечность при транспортировке и печати, а также устойчивость к высоким
+                        температурам, особенно при больших тиражах.
+                      </div>
+                      <button class="button solution-card__button"><span>Подробнее</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about__right">
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Качество</span>
+                </div>
+              </div>
+              <div class="accordion__content" style="display: block">Высокое качество, обеспечивающее экономичную печать без скрытых затрат</div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Идеальное решение</span>
+                </div>
+              </div>
+              <div class="accordion__content" style="display: block">
+                для сервисных/MPS-партнеров, которые рассчитывают свои затраты и не хотят терять из-за плохого
+                качества расходных материалов и необходимости постоянно отправлять своих инженеров на место
+                для устранения неполадок и замены расходных материалов
+              </div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Ассортимент</span>
+                </div>
+              </div>
+              <div class="accordion__content">Текст</div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Совместимость</span>
+                </div>
+              </div>
+              <div class="accordion__content">Текст</div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Сертификация</span>
+                </div>
+              </div>
+              <div class="accordion__content">Текст</div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Экологичность</span>
+                </div>
+              </div>
+              <div class="accordion__content">Текст</div>
+            </div>
+            <div class="about__accordion accordion">
+              <div class="accordion__tab-wrapper">
+                <div class="accordion__tab">
+                  <svg width="19" height="11">
+                    <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                  </svg><span>Эксклюзивное сырье</span>
+                </div>
+              </div>
+              <div class="accordion__content">Текст</div>
+            </div>
+            <div class="about__materials materials">
+              <div class="materials__title">Брошюра <br> по принтерам</div>
+              <div class="materials__content">
+                <div class="materials__text">В основе серии Jumbo лежит стремление обеспечить исключительную производительность и эффективность.</div>
+                <div class="materials__plate"></div><a class="button materials__download" href="#"><span>Скачать</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </body>

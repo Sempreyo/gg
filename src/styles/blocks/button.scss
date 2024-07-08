@@ -1,0 +1,19 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-button;
+	padding: 12px 14px;
+	box-shadow: 0 7px 30px rgba(243, 152, 0, 0.69);
+	border-radius: 36px;
+	color: $white;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.2;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&:hover {
+		background-color: rgba($color-button, 0.8);
+	}
+}

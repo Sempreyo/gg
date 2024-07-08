@@ -8,8 +8,17 @@
 @import "base/fonts";
 @import "base/animation";
 @import "base/global";
-@import "blocks/container";
 
 /* Blocks */
+@import "blocks/container";
+@import "blocks/button";
 @import "blocks/header";
 @import "blocks/footer";
+@import "blocks/solution-card";
+@import "blocks/article";
+@import "blocks/advantages";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/accordion";
+@import "blocks/solutions";
+@import "blocks/materials";

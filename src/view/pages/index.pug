@@ -8,6 +8,173 @@ block vars
 
 block main
 	section.hero
+		.hero__bg
+			+picture('bg', 'jpg')
+		.container.hero__container
+			.hero__left
+				h1.hero__title Без айсбергов в печати с <span>G&G</span>
+				.hero__description.
+					G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные материалы и
+					профессиональные решения для печати более чем 200 миллионам потребителей в более чем 170 странах. <br>
+					История компании началась в 2000 году с идеи предложить потребителям высококачественную альтернативу дорогим
+					оригинальным расходным материалам.
+			.hero__advantages
+				.advantages
+					.advantages__icon
+						+icon('adv-1')
+					.advantages__content
+						.advantages__title Высокое качество:
+						.advantages__text компания использует только качественные материалы и технологии для производства своей продукции
+				.advantages
+					.advantages__icon
+						+icon('adv-2')
+					.advantages__content
+						.advantages__title Экологичность:
+						.advantages__text G&G заботится об окружающей среде и использует экологически чистые материалы
+				.advantages
+					.advantages__icon
+						+icon('adv-3')
+					.advantages__content
+						.advantages__title Инновации:
+						.advantages__text компания постоянно внедряет новые технологии и разрабатывает инновационные продукты.
+
+	section.about
+		.container.about__container
+			.about__left
+				.about__articles
+					.article
+						.article__title Название первой статьи, написанное в две строки
+						.article__text.
+							G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
+							материалы и профессиональные решения для печати более чем 200 миллионам потребителей
+						+button('Читать полностью', 'article__link')
+					.article
+						.article__title Название первой статьи, написанное в две строки
+						.article__text.
+							G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
+							материалы и профессиональные решения для печати более чем 200 миллионам потребителей
+						+button('Читать полностью', 'article__link')
+				.about__solutions.solutions
+					.solutions__title Лучшие решения
+					.solutions__wrapper
+						.solutions__nav.swiper-nav
+							.swiper-btn-prev
+								+icon('chevron-left')(width='18', height='32')
+							.swiper-btn-next
+								+icon('chevron-right')(width='18', height='32')
+						.solutions__slider.swiper
+							.swiper-wrapper
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/1', 'jpg')
+									.solution-card__title СЕРИЯ JUMBO
+									.solution-card__text.
+										В основе серии Jumbo лежит стремление обеспечить исключительную производительность и эффективность. <br>
+										Благодаря удвоению ресурса по сравнению со стандартными картриджами серия Jumbo гарантирует, что предприятия
+										смогут печатать больше, при этом значительно снижая стоимость одного отпечатка.
+									+button('Подробнее', 'solution-card__button')
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/2', 'jpg')
+									.solution-card__title СЕРИЯ DUAL-ECO
+									.solution-card__text.
+										Экономичный выбор: струйные картриджи Dual-Eco имеют большую емкость чернил, что позволяет печатать в два
+										раза больше страниц по сравнению с оригинальными картриджами. <br>
+										Если взять в качестве примера замену Epson T9451, Dual-Eco от G&G может сэкономить до 73% стоимости одного отпечатка.
+									+button('Подробнее', 'solution-card__button')
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/3', 'jpg')
+									.solution-card__title ТОНЕР-КАРТРИДЖИ ДЛЯ <br> ПРОИЗВОДИТЕЛЬНЫХ МФУ ФОРМАТА А3
+									.solution-card__text.
+										Производительные устройства А3 формата в основном предназначены для рынка MPS и крупных предприятий. <br>
+										У них более высокие требования к патентной безопасности и экологичности.
+									+button('Подробнее', 'solution-card__button')
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/4', 'jpg')
+									.solution-card__title КАРТРИДЖИ ДЛЯ СТРУЙНЫХ ШИРОКОФОРМАТНЫХ УСТРОЙСТВ
+									.solution-card__text.
+										G&G на протяжение всей своей истории ведет исследовательскую работу и внедряет инновации, с помощью
+										R&D расширяя линейку своей продукции для использования в широкоформатных струйных машинах.
+									+button('Подробнее', 'solution-card__button')
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/5', 'jpg')
+									.solution-card__title ТОНЕР-КАРТРИДЖИ ДЛЯ ЦВЕТНЫХ ЛАЗЕРНЫХ УСТРОЙСТВ
+									.solution-card__text.
+										G&G выбрал путь эксперта в цвете. Технология Color Control, созданная инженерами G&G, обеспечивает идеальный
+										баланс между точным дизайном продукта, тщательным отбором сырья, строгим производственным контролем,
+										соблюдением требований безопасности и надежной цепочкой поставок.
+									+button('Подробнее', 'solution-card__button')
+								.swiper-slide.solution-card
+									a.solution-card__link(href='#', target='_blank')
+									.solution-card__image
+										+picture('solutions/6', 'jpg')
+									.solution-card__title ЛАЗЕРНЫЕ УСТРОЙСТВА G&G
+									.solution-card__text.
+										Лазерные принтеры G&G имеют прочный внутренний металлический каркас, обеспечивающий
+										устойчивость и долговечность при транспортировке и печати, а также устойчивость к высоким
+										температурам, особенно при больших тиражах.
+									+button('Подробнее', 'solution-card__button')
+			.about__right
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Качество
+					.accordion__content(style='display: block') Высокое качество, обеспечивающее экономичную печать без скрытых затрат
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Идеальное решение
+					.accordion__content(style='display: block').
+						для сервисных/MPS-партнеров, которые рассчитывают свои затраты и не хотят терять из-за плохого
+						качества расходных материалов и необходимости постоянно отправлять своих инженеров на место
+						для устранения неполадок и замены расходных материалов
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Ассортимент
+					.accordion__content Текст
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Совместимость
+					.accordion__content Текст
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Сертификация
+					.accordion__content Текст
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Экологичность
+					.accordion__content Текст
+				.about__accordion.accordion
+					.accordion__tab-wrapper
+						.accordion__tab
+							+icon('chevron-down')(width='19', height='11')
+							span Эксклюзивное сырье
+					.accordion__content Текст
+				.about__materials.materials
+					.materials__title Брошюра <br> по принтерам
+					.materials__content
+						.materials__text.
+							В основе серии Jumbo лежит стремление обеспечить исключительную производительность и эффективность.
+						.materials__plate
+						+button('Скачать', 'materials__download', '#')
 
 block scripts
 	include ../blocks/metrics.html

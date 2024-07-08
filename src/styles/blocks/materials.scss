@@ -1,0 +1,59 @@
+.materials {
+	position: relative;
+
+	&__title {
+		padding: 0 27px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.2;
+		color: $color-title;
+	}
+
+	&__content {
+		display: flex;
+		gap: 45px;
+		padding: 25px 27px 22px;
+		border-radius: 32px;
+		border: 1px solid $color-title;
+		margin-top: 15px;
+	}
+
+	&__text {
+		max-width: 200px;
+		font-size: 12px;
+		line-height: 1.2;
+	}
+
+	&__plate {
+		position: relative;
+		margin-top: -88px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 98px;
+			height: 138px;
+			border-radius: 5px;
+			background-color: $color-card;
+			transform: translate3d(64px, 2px, 0) rotate(17deg);
+		}
+
+		&::after {
+			position: absolute;
+			width: 98px;
+			height: 138px;
+			content: '';
+			border-radius: 5px;
+			background-color: $white;
+			transform: rotate(9deg);
+		}
+	}
+
+	&__download {
+		position: absolute;
+		bottom: -20px;
+		right: 23px;
+		padding: 12px 52px;
+	}
+}
