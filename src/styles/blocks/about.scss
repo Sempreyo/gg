@@ -5,13 +5,24 @@
 
 	&__container {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		gap: 70px;
+		gap: 40px;
+
+		@include min(ti) {
+			flex-direction: row;
+		}
+
+		@include min(tl) {
+			gap: 70px;
+		}
 	}
 
 	&__left {
-		min-width: 403px;
-		max-width: 403px;
+		@include min(ti) {
+			min-width: 403px;
+			max-width: 403px;
+		}
 	}
 
 	&__right {
@@ -21,11 +32,19 @@
 	&__articles {
 		display: flex;
 		flex-direction: column;
-		gap: 44px;
+		gap: 20px;
+
+		@include min(ti) {
+			gap: 44px;
+		}
 	}
 
 	&__solutions {
-		margin-top: 51px;
+		margin-top: 30px;
+
+		@include min(ti) {
+			margin-top: 51px;
+		}
 	}
 
 	&__accordion + #{$parent}__accordion {
@@ -37,6 +56,10 @@
 	}
 
 	&__materials {
-		margin-top: 74px;
+		margin-top: 50px;
+
+		@include min(ti) {
+			margin-top: 74px;
+		}
 	}
 }

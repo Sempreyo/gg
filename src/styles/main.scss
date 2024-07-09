@@ -1,6 +1,6 @@
 /* Libs */
 @import "./../../node_modules/swiper/swiper";
-@import "libs/aos.css";
+@import "libs/select2.min.css";
 
 /* Base */
 @import "base/var";
@@ -15,6 +15,7 @@
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/solution-card";
+@import "blocks/catalog-card";
 @import "blocks/article";
 @import "blocks/advantages";
 @import "blocks/hero";
@@ -22,3 +23,6 @@
 @import "blocks/accordion";
 @import "blocks/solutions";
 @import "blocks/materials";
+@import "blocks/statistics";
+@import "blocks/catalog";
+@import "blocks/video";

@@ -1,6 +1,7 @@
 .article {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	padding: 21px 24px 25px;
 	background-color: rgba(0, 104, 183, 0.73);
 	border-radius: 32px;
@@ -19,6 +20,9 @@
 
 	&__link {
 		margin-top: 33px;
-		margin-left: auto;
+
+		@include min(ti) {
+			margin-left: auto;
+		}
 	}
 }

@@ -1,17 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const anchors = document.querySelectorAll('.anchor');
+	const anchors = document.querySelectorAll('.anchor');
 
 	if (anchors && anchors.length > 0) {
-        anchors.forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+		anchors.forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    }
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+	}
 
-    AOS.init();
+	$('.catalog__select').select2({
+		minimumResultsForSearch: -1
+	});
 });

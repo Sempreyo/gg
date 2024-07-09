@@ -11,22 +11,44 @@
 
 	&__content {
 		display: flex;
+		flex-direction: row;
 		gap: 45px;
 		padding: 25px 27px 22px;
 		border-radius: 32px;
 		border: 1px solid $color-title;
 		margin-top: 15px;
+
+		@include min(ti) {
+			flex-direction: column;
+		}
+
+		@include min(tl) {
+			flex-direction: row;
+		}
 	}
 
 	&__text {
-		max-width: 200px;
+		max-width: 300px;
 		font-size: 12px;
 		line-height: 1.2;
+
+		@include min(ti) {
+			max-width: 100%;
+		}
+
+		@include min(tl) {
+			max-width: 200px;
+		}
 	}
 
 	&__plate {
 		position: relative;
-		margin-top: -88px;
+		height: 170px;
+
+		@include min(tl) {
+			height: auto;
+			margin-top: -88px;
+		}
 
 		&::before {
 			position: absolute;
@@ -37,6 +59,16 @@
 			border-radius: 5px;
 			background-color: $color-card;
 			transform: translate3d(64px, 2px, 0) rotate(17deg);
+
+			@include min(ti) {
+				left: 30%;
+				transform: translate3d(calc(-30% + 64px), 2px, 0) rotate(17deg);
+			}
+
+			@include min(900) {
+				left: unset;
+				transform: translate3d(64px, 2px, 0) rotate(17deg);
+			}
 		}
 
 		&::after {
@@ -47,13 +79,36 @@
 			border-radius: 5px;
 			background-color: $white;
 			transform: rotate(9deg);
+
+			@include min(ti) {
+				left: 30%;
+				transform: translateX(-30%) rotate(9deg);
+			}
+
+			@include min(900) {
+				left: unset;
+				transform: rotate(9deg);
+			}
 		}
 	}
 
 	&__download {
 		position: absolute;
 		bottom: -20px;
-		right: 23px;
+		left: 50%;
+		transform: translateX(-50%);
 		padding: 12px 52px;
+
+		@include min(900) {
+			bottom: 70px;
+			right: 30px;
+			left: unset;
+			transform: unset;
+		}
+
+		@include min(tl) {
+			bottom: -20px;
+			right: 23px;
+		}
 	}
 }

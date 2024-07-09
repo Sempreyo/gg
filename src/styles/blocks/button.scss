@@ -16,4 +16,13 @@
 	&:hover {
 		background-color: rgba($color-button, 0.8);
 	}
+
+	&--blue {
+		background-color: $color-border;
+		box-shadow: 0 7px 30px rgba(2, 119, 179, 0.6);
+
+		&:hover {
+			background-color: rgba($color-border, 0.8);
+		}
+	}
 }
