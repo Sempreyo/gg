@@ -1,5 +1,9 @@
 .video {
-	padding: 43px 0;
+	padding: 43px 0 100px;
+
+	@include min(ti) {
+		padding: 43px 0;
+	}
 
 	&__container {
 		display: flex;
@@ -14,10 +18,18 @@
 
 	&__nav {
 		position: absolute;
-		top: 132px;
-		left: -80px;
+		top: calc(100% + 20px);
+		left: 50%;
+		transform: translateX(-50%);
 		z-index: 3;
-		width: calc(100% + 160px);
+		width: auto;
+
+		@include min(ti) {
+			top: 132px;
+			left: -80px;
+			transform: unset;
+			width: calc(100% + 160px);
+		}
 
 		.swiper-btn-prev,
 		.swiper-btn-next {

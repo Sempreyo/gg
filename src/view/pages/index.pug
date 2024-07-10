@@ -8,11 +8,14 @@ block vars
 
 block main
 	section.hero
+		+icon('dots-1')(width='123', height='422', class='hero__dots')
 		.hero__bg
 			+picture('bg', 'jpg')
+		.hero__peng.js-parallax(data-parallax-property='translateY', data-parallax-property-value='-180', data-parallax-steps='0, 180')
+			+picture('peng-1', 'png')
 		.container.hero__container
 			.hero__left
-				h1.hero__title Без айсбергов в печати с <span>G&G</span>
+				h1.hero__title <span class="hero__title-part">Без айсбергов</span> <span class="hero__title-part">в печати</span> <span class="hero__title-part">с <span class="hero__title-bg">G&G</span></span>
 				.hero__description.
 					G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные материалы и
 					профессиональные решения для печати более чем 200 миллионам потребителей в более чем 170 странах. <br>
@@ -25,7 +28,7 @@ block main
 					.advantages__content
 						.advantages__title Высокое качество:
 						.advantages__text компания использует только качественные материалы и технологии для производства своей продукции
-				.advantages
+				.advantages.advantages--reverse
 					.advantages__icon
 						+icon('adv-2')
 					.advantages__content
@@ -38,10 +41,14 @@ block main
 						.advantages__title Инновации:
 						.advantages__text компания постоянно внедряет новые технологии и разрабатывает инновационные продукты.
 
-	section.about
+	section.about(invisible)
 		.container.about__container
 			.about__left
 				.about__articles
+					.about__peng.js-parallax(data-parallax-property='translateY', data-parallax-property-value='-80', data-parallax-steps='0, 80')
+						+picture('peng-2', 'png')
+					.about__peng-2.js-parallax(data-parallax-property='translateY', data-parallax-property-value='80', data-parallax-steps='0, 80')
+						+picture('peng-3', 'png')
 					.article
 						.article__title Название первой статьи, написанное в две строки
 						.article__text.
@@ -125,13 +132,13 @@ block main
 			.about__right
 				.about__accordion.accordion
 					.accordion__tab-wrapper
-						.accordion__tab
+						.accordion__tab.accordion__tab--active
 							+icon('chevron-down')(width='19', height='11')
 							span Качество
 					.accordion__content(style='display: block') Высокое качество, обеспечивающее экономичную печать без скрытых затрат
 				.about__accordion.accordion
 					.accordion__tab-wrapper
-						.accordion__tab
+						.accordion__tab.accordion__tab--active
 							+icon('chevron-down')(width='19', height='11')
 							span Идеальное решение
 					.accordion__content(style='display: block').
@@ -176,30 +183,30 @@ block main
 						.materials__plate
 						+button('Скачать', 'materials__download', '#')
 
-	section.statistics
+	section.statistics(invisible)
 		.container.statistics__container
 			.statistics__item
 				p На
-				p <span>30</span>%-<span>100</span>%
+				p <span class="odometer-value" data-content="30">30</span>%-<span class="odometer-value" data-content="100">100</span>%
 				p больше ресурс G&G картриджей <br> по сравнению с ОЕМ
 			.statistics__item
 				p &nbsp;
-				p <span>13</span> <span>700</span>
+				p <span class="odometer-value" data-content="13">13</span>&nbsp;<span class="odometer-value" data-content="700">700</span>
 				p позиций <br> в ассортименте
 			.statistics__item
 				p &nbsp;
-				p <span>185</span>
+				p <span class="odometer-value" data-content="185">185</span>
 				p производственных <br> линий
 			.statistics__item
 				p Менее
-				p <span>0.3</span>%
+				p <span class="odometer-value" data-content="0">0</span>.<span class="odometer-value" data-content="3">3</span>%
 				p уровень <br> брака
 			.statistics__item
 				p &nbsp;
-				p <span>10</span>
+				p <span class="odometer-value" data-content="10">10</span>
 				p Среднее количество <br> обновлений прошивки <br> в год
 
-	section.catalog
+	section.catalog(invisible)
 		.container.catalog__container
 			.catalog__window
 				select.catalog__select
@@ -212,7 +219,7 @@ block main
 				.catalog__title Возможно вам подойдут:
 				.catalog__grid-wrapper
 					+icon('dots-2')(width='949', height='123', class='catalog__grid-icon')
-					.catalog__grid
+					.catalog__grid(data-tab='JUMBO', style='display: grid')
 						.catalog-card
 							.catalog-card__image
 								+picture('catalog/1', 'png')
@@ -247,7 +254,152 @@ block main
 								li <b>Совместимость:</b> <br> Brother HL-L5210/ L5215/ L6210/ <br> L6410/ L6415/ DCP-L5510/ <br> MFC-L5710/ L5715/ L6710/ L6910/ <br> L6915/ EX910
 							a.catalog-card__pdf(href='#') Скачать брошюру
 
-	section.video
+					.catalog__grid.catalog__grid--column-4(data-tab='ЛАЗЕРНЫЕ УСТРОЙСТВА')
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/4', 'png')
+							.catalog-card__title P2022/P2022W
+							ul.catalog-card__list
+								li <b>Тип:</b> принтер
+								li <b>Скорость печати (A4):</b> <br> 22 стр./мин
+								li <b>Соединение:</b> <br> USB + Сеть + wi-fi <br> (модель с «W»)
+								li <b>Дополнительный картридж</b> <br> на 15 000 стр.
+								li <b>Сегменты пользователей:</b> <br> Домашний и малый офис, SMB
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/5', 'png')
+							.catalog-card__title GP3300DN/DW
+							ul.catalog-card__list
+								li <b>Тип:</b> принтер
+								li <b>Скорость печати (A4):</b> <br> 33 стр./мин
+								li <b>Соединение:</b> <br> USB + Сеть + wi-fi <br> (модель с «W»)
+								li <b>Дополнительный картридж</b> <br> на 25 000 стр.
+								li <b>Сегменты пользователей:</b> <br> Домашний и малый офис, <br> SMB, большие рабочие группы, <br> госсектор
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/6', 'png')
+							.catalog-card__title GM3300DN/DW
+							ul.catalog-card__list
+								li <b>Тип:</b> МФУ
+								li <b>Скорость печати (A4):</b> <br> 33 стр./мин
+								li <b>Соединение:</b> <br> USB + Сеть + wi-fi <br> (модель с «W»)
+								li <b>Дополнительный картридж</b> <br> на 25 000 стр.
+								li <b>Сегменты пользователей:</b> <br> Домашний и малый офис, <br> SMB, большие рабочие группы, <br> госсектор
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/7', 'png')
+							.catalog-card__title GM3310DN/DW
+							ul.catalog-card__list
+								li <b>Тип:</b> МФУ
+								li <b>Скорость печати (A4):</b> <br> 33 стр./мин
+								li <b>Соединение:</b> <br> USB + Сеть + wi-fi <br> (модель с «W»)
+								li <b>Дополнительный картридж</b> <br> на 25 000 стр.
+								li <b>Сегменты пользователей:</b> <br> Домашний и малый офис, <br> SMB, большие рабочие группы, <br> госсектор
+							a.catalog-card__pdf(href='#') Скачать брошюру
+
+					.catalog__grid(data-tab='ТОНЕР-КАРТРИДЖИ А3')
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/8', 'png')
+							.catalog-card__title GG-CRMPC2003 Series
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> MPC2003
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Ресурс:</b> 15 000 стр. (черный), 9 500 стр. (цветные)
+								li <b>Совместимость:</b> Ricoh MP C2003/ MP C2004/ C2503/ C2504/ IM C2000/ IM C2500
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/9', 'png')
+							.catalog-card__title GG-NPG67 Series
+							ul.catalog-card__list
+								li <b></b> NPG67BK/C/M/Y
+								li <b></b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Ресурс:</b> 36 000 стр. (черный), 19 000 стр. (цветные)
+								li <b>Совместимость:</b> Canon imageRunner ADVANCE C3020/ C3320/ C3325/ C3330/ C3520/ C3525/ C3530
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/10', 'png')
+							.catalog-card__title GG-CCEXV64 Series
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> C-EXV64K/C/M/Y
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Ресурс:</b> 38 000 стр.
+								li <b>Suitable for use in:</b> <br> Canon imageRunner ADVANCE DX C3926i/3930i/3935i/3922i
+							a.catalog-card__pdf(href='#') Скачать брошюру
+					.catalog__grid(data-tab='ЧЕРНИЛА')
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/11', 'png')
+							.catalog-card__title GG-C13T00S14
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> 104
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Объем чернил:</b> 70ml
+								li <b>Совместимость:</b> множество моделей линейки Epson EcoTank (в том числе L1110, 3110, 3210, 5190, 5296и другие)
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/12', 'png')
+							.catalog-card__title GG-T6641BK
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> 664
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Объем чернил:</b> 70ml
+								li <b>Совместимость:</b> множество моделей линеек Epson L1xx, L2xx, L3xx, L4xx, Epson Expression (в том числе ET-2500, ET-4500), Epson WorkForce (в том числе ET-14000, L1300, ET-3600, ET-16500 и другие)
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/13', 'png')
+							.catalog-card__title GG-T6731BK
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> 673
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый / Светло-голубой / Светло-красный
+								li <b>Объем чернил:</b> 70ml
+								li <b>Совместимость:</b> Epson Inkjet Photo L800/ L801/ L810/ L850
+							a.catalog-card__pdf(href='#') Скачать брошюру
+					.catalog__grid(data-tab='DUAL-ECO')
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/14', 'png')
+							.catalog-card__title GG-C13T945140-Dual
+							ul.catalog-card__list
+								li <b>Артикул OEM:</b> C13T945140
+								li <b>Тип:</b> Картридж с чипом для офисной струйной техники
+								li <b>Тип чернил:</b> На основе пигмента / красителя
+								li <b>Цвет:</b> Черный
+								li <b>Ресурс:</b> 5 000 стр.
+								li <b>Совместимость:</b> Epson WorkForce Pro WF-C5210DW/ C5290DW/ C5710DWF/ C5790DWF
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/15', 'png')
+							.catalog-card__title GG-C13T865140-R
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> T8651
+								li <b>Тип:</b> Картридж с чипом для офисной струйной техники
+								li <b>Тип чернил:</b> На основе пигмента / красителя
+								li <b>Цвет:</b> Черный
+								li <b>Ресурс:</b> 10 000 стр.
+								li <b>Совместимость:</b> Epson WorkForce Pro WF-M5690DWF/ M5190DW
+							a.catalog-card__pdf(href='#') Скачать брошюру
+						.catalog-card
+							.catalog-card__image
+								+picture('catalog/16', 'png')
+							.catalog-card__title GG-3ED71A / 3ED67A / 3ED68A / 3ED69A
+							ul.catalog-card__list
+								li <b>Артикул ОЕМ:</b> 3ED71A/3ED67A/3ED68A/3ED69A
+								li <b>Тип:</b> Картридж с чипом для офисной струйной техники
+								li <b>Тип чернил:</b> На основе пигмента / красителя
+								li <b>Цвет:</b> Черный / Голубой / Пурпурный / Желтый
+								li <b>Объем чернил:</b> 80мл / 29мл / 29мл / 29мл
+								li <b>Совместимость:</b> HP DesignJet T650/T630/T250/T230/T210/Studio Steel/Studio Wood Printers
+							a.catalog-card__pdf(href='#') Скачать брошюру
+	section.video(invisible)
 		.container.video__container
 			.video__wrapper
 				.video__nav.swiper-nav

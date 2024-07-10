@@ -1,28 +1,52 @@
 .footer {
-	padding: 67px 0 0;
+	padding: 20px 0 0;
 	overflow: hidden;
+
+	@include min(t) {
+		padding: 67px 0 0;
+	}
 
 	&__container {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		position: relative;
+
+		@include min(tl) {
+			flex-direction: row;
+		}
 	}
 
 	&__iceberg {
 		position: absolute;
-		top: -37px;
-		left: 76%;
+		bottom: 0;
+		left: 50%;
 		z-index: -2;
+
+		@include min(tl) {
+			top: -37px;
+			left: 76%;
+			bottom: unset;
+		}
 	}
 
 	&__dots {
 		position: absolute;
 		bottom: 22px;
-		left: 88%;
+		left: 62%;
 		z-index: -1;
+
+		@include min(tl) {
+			left: 88%;
+		}
 	}
 
 	&__content {
-		max-width: 555px;
+		padding-bottom: 60px;
+
+		@include min(tl) {
+			max-width: 555px;
+		}
 	}
 
 	&__title {
@@ -33,13 +57,20 @@
 	}
 
 	&__text {
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.2;
 		margin-top: 22px;
+
+		@include min(t) {
+			font-size: 16px;
+		}
 	}
 
 	&__peng {
 		position: relative;
+		left: 230px;
+		display: flex;
+		align-items: flex-end;
 		margin-top: -30px;
 
 		&::before {

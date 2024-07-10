@@ -57,6 +57,10 @@ main {
 	z-index: 1;
 }
 
+section {
+	transition: opacity 1s ease;
+}
+
 a {
 	color: $white;
 	text-decoration: none;
@@ -105,20 +109,9 @@ textarea {
 	}
 }
 
-.d-none-desktop {
-	display: block !important;
-
-	@include min(ti) {
-		display: none !important;		
-	}
-}
-
-.d-none-mobile {
-	display: none !important;
-
-	@include min(ti) {
-		display: block !important;
-	}
+[invisible] {
+	opacity: 0;
+	transition: opacity 0.5s ease;
 }
 
 /* Swiper */
@@ -153,8 +146,12 @@ textarea {
 
 /* Select2 */
 .select2-container {
-	max-width: 403px;
+	max-width: 240px;
 	width: 100% !important;
+
+	@include min(t) {
+		max-width: 403px;
+	}
 }
 
 .select2-container--default .select2-selection--single {
@@ -169,6 +166,7 @@ textarea {
 	font-size: 16px;
 	line-height: 58px;
 	padding-left: 25px;
+	padding-right: 34px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {

@@ -11,12 +11,16 @@
 
 	&__content {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		gap: 45px;
 		padding: 25px 27px 22px;
 		border-radius: 32px;
 		border: 1px solid $color-title;
 		margin-top: 15px;
+
+		@include min(600) {
+			flex-direction: row;
+		}
 
 		@include min(ti) {
 			flex-direction: column;
@@ -28,9 +32,13 @@
 	}
 
 	&__text {
-		max-width: 300px;
+		max-width: 100%;
 		font-size: 12px;
 		line-height: 1.2;
+
+		@include min(600) {
+			max-width: 300px;
+		}
 
 		@include min(ti) {
 			max-width: 100%;
@@ -52,6 +60,7 @@
 
 		&::before {
 			position: absolute;
+			left: 20%;
 			content: '';
 			display: block;
 			width: 98px;
@@ -59,6 +68,11 @@
 			border-radius: 5px;
 			background-color: $color-card;
 			transform: translate3d(64px, 2px, 0) rotate(17deg);
+
+			@include min(600) {
+				left: 0;
+				transform: translate3d(64px, 2px, 0) rotate(17deg);
+			}
 
 			@include min(ti) {
 				left: 30%;
@@ -73,12 +87,17 @@
 
 		&::after {
 			position: absolute;
+			left: 20%;
 			width: 98px;
 			height: 138px;
 			content: '';
 			border-radius: 5px;
 			background-color: $white;
 			transform: rotate(9deg);
+
+			@include min(600) {
+				left: 0;
+			}
 
 			@include min(ti) {
 				left: 30%;

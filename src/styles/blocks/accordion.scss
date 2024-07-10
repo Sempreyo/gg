@@ -46,9 +46,19 @@
 		font-size: 16px;
 		line-height: 1.2;
 		cursor: pointer;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: rgba(0, 104, 183, 0.5);
+		}
+
+		&--active svg {
+			transform: scale(1, -1);
+		}
 
 		svg {
 			color: $color-button;
+			transition: transform 0.3s ease;
 		}
 	}
 
@@ -57,9 +67,13 @@
 		padding: 24px 24px 22px 30px;
 		background-color: rgba(255, 255, 255, 0.73);
 		border-radius: 14px;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.2;
 		color: $color-text-addition;
 		margin-top: 5px;
+
+		@include min(t) {
+			font-size: 16px;
+		}
 	}
 }

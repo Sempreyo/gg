@@ -15,8 +15,13 @@
 	&__nav {
 		position: absolute;
 		top: 120px;
-		left: -25px;
+		left: 5px;
 		z-index: 3;
-		width: calc(100% + 50px);
+		width: calc(100% - 10px);
+
+		@include min(tl) {
+			left: -25px;
+			width: calc(100% + 50px);
+		}
 	}
 }

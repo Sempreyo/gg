@@ -90,7 +90,7 @@
 							const wrapperObserver = new ResizeObserver((entries) => {
 								const [entry] = entries;
 
-								if (entry.contentRect.width < 991) {
+								if (entry.contentRect.width < 992) {
 									elem.setAttribute(
 										'style',
 										`transform: translateX(${propertyVal}px) rotate(${propertyVal / 2}deg)`,
