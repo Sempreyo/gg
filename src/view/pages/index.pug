@@ -50,17 +50,22 @@ block main
 					.about__peng-2.js-parallax(data-parallax-property='translateY', data-parallax-property-value='80', data-parallax-steps='0, 80')
 						+picture('peng-3', 'png')
 					.article
-						.article__title Название первой статьи, написанное в две строки
+						.article__title Расходные материалы G&G — решение проблемы «айсбергов» в печати
 						.article__text.
-							G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
-							материалы и профессиональные решения для печати более чем 200 миллионам потребителей
-						+button('Читать полностью', 'article__link')
+							Если печатная инфраструктура на предприятии не оптимизирована, то компания или провайдер управляемых
+							услуг печати будут терпеть издержки по ряду причин. Выход есть — расходные материалы самого высокого
+							качества позволяют избежать затрат на ремонт и простои техники, логистику и перепечатывание «неудачных» страниц.
+							Редакция ZOOM.CNews рассказывает, что может предложить предприятиям и MPS-провайдерам производитель
+							совместимых расходных материалов — бренд G&G.
+						+button('Читать полностью', 'article__link', 'https://zoom.cnews.ru/publication/item/65220')
 					.article
-						.article__title Название первой статьи, написанное в две строки
+						.article__title Печать без забот: расходные материалы G&G премиального качества
 						.article__text.
-							G&G — это глобальный бренд премиум класса от компании Ninestar, который поставляет расходные
-							материалы и профессиональные решения для печати более чем 200 миллионам потребителей
-						+button('Читать полностью', 'article__link')
+							Оригинальные картриджи для принтеров стоят очень дорого, а некачественные и дешевые расходные материалы
+							могут снизить производительность оборудования и сократить его срок службы. Альтернатива — совместимые
+							расходные материалы, которые не вредят принтерам. Редакция ZOOM.CNews рассказывает о лидере в области
+							производства совместимых расходных материалов — бренде G&G.
+						+button('Читать полностью', 'article__link', 'https://zoom.cnews.ru/publication/item/64939')
 				.about__solutions.solutions
 					.solutions__title Лучшие решения
 					.solutions__wrapper
@@ -142,7 +147,7 @@ block main
 							+icon('chevron-down')(width='19', height='11')
 							span Идеальное решение
 					.accordion__content(style='display: block').
-						для сервисных/MPS-партнеров, которые рассчитывают свои затраты и не хотят терять из-за плохого
+						Для сервисных/MPS-партнеров, которые рассчитывают свои затраты и не хотят терять из-за плохого
 						качества расходных материалов и необходимости постоянно отправлять своих инженеров на место
 						для устранения неполадок и замены расходных материалов
 				.about__accordion.accordion
@@ -150,31 +155,31 @@ block main
 						.accordion__tab
 							+icon('chevron-down')(width='19', height='11')
 							span Ассортимент
-					.accordion__content Текст
+					.accordion__content Широкий ассортимент, включающий специфические и очень требовательные к качеству сегменты, такие как широкий формат, цифровая струйная печать и очень производительные = очень дорогие копиры формата А3
 				.about__accordion.accordion
 					.accordion__tab-wrapper
 						.accordion__tab
 							+icon('chevron-down')(width='19', height='11')
 							span Совместимость
-					.accordion__content Текст
+					.accordion__content Первые предложения продуктов на рынке совместимки — экономия затрат и расширение предложения заказчикам (не работать только с дорогим оригиналом, а иметь возможность рассмотреть качественную совместимку, когда кроме G&G ее никто не предлагает, поскольку мы ее первыми разработали)
 				.about__accordion.accordion
 					.accordion__tab-wrapper
 						.accordion__tab
 							+icon('chevron-down')(width='19', height='11')
 							span Сертификация
-					.accordion__content Текст
+					.accordion__content Сертификация и стандартизация (применимо к России)
 				.about__accordion.accordion
 					.accordion__tab-wrapper
 						.accordion__tab
 							+icon('chevron-down')(width='19', height='11')
 							span Экологичность
-					.accordion__content Текст
+					.accordion__content Для клиентов с экологическими требованиями (правительство, здравоохранение, образование) экономия затрат на создание имиджа
 				.about__accordion.accordion
 					.accordion__tab-wrapper
 						.accordion__tab
 							+icon('chevron-down')(width='19', height='11')
 							span Эксклюзивное сырье
-					.accordion__content Текст
+					.accordion__content Эксклюзивное сырье и собственные патенты
 				.about__materials.materials
 					.materials__title Брошюра <br> по принтерам
 					.materials__content
@@ -215,7 +220,7 @@ block main
 					option ТОНЕР-КАРТРИДЖИ А3
 					option ЧЕРНИЛА
 					option DUAL-ECO
-				+button('Отправить заявку', 'button--blue catalog__link')
+				+button('Отправить заявку', 'button--blue catalog__link', '#')(data-hystmodal='#feedback')
 				.catalog__title Возможно вам подойдут:
 				.catalog__grid-wrapper
 					+icon('dots-2')(width='949', height='123', class='catalog__grid-icon')
@@ -411,16 +416,31 @@ block main
 					.swiper-wrapper
 						.video__item.swiper-slide
 							video(controls)
-								source(src='./images/video.mp4', type='video/mp4')
-							.video__label G&G: эксперт в цветной печати
+								source(src='./images/video1.mp4', type='video/mp4')
+							.video__label G&G - Усовершенствованное автоматическое производство тонер-картриджей
 						.video__item.swiper-slide
 							video(controls)
-								source(src='./images/video.mp4', type='video/mp4')
-							.video__label G&G: эксперт в цветной печати 2
+								source(src='./images/video2.mp4', type='video/mp4')
+							.video__label G&G - эксперт в цвете
 						.video__item.swiper-slide
 							video(controls)
-								source(src='./images/video.mp4', type='video/mp4')
-							.video__label G&G: эксперт в цветной печати 3
+								source(src='./images/video3.mp4', type='video/mp4')
+							.video__label Как рождаются G&G картриджи для струйных широкоформатных устройств
+						.video__item.swiper-slide
+							video(controls)
+								source(src='./images/video4.mp4', type='video/mp4')
+							.video__label Производство восстановленных картриджей G&G
+						.video__item.swiper-slide
+							video(controls)
+								source(src='./images/video5.mp4', type='video/mp4')
+							.video__label Цветные тонер-картриджи G&G - видео-обзор iXBT
+
+block modals
+	#feedback.hystmodal.feedback(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window.feedback__window(role='dialog' aria-modal='true')
+				button.hystmodal__close.feedback__close(data-hystclose) Закрыть
+				script(type='text/javascript' src='https://www.cnews.ru/inc/form/viewform.php?id=2264&embedded=js' charset='UTF-8')
 
 
 block scripts

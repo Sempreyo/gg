@@ -16,16 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	$('.catalog__select').select2({
-		minimumResultsForSearch: -1
-	});
-
+	const select = $('.catalog__select');
 	const catalogContents = $('.catalog__grid');
-	$('.catalog__select').on('select2:select', function () {
-		catalogContents.hide();
+	if (select && select.length > 0) {
+		select.select2({
+			minimumResultsForSearch: -1
+		});
 
-		$(`.catalog__grid[data-tab="${$('.catalog__select').val()}"]`).fadeIn(300).css('display', 'grid');
-	});
+		$('.catalog__select').on('select2:select', function () {
+			catalogContents.hide();
+
+			$(`.catalog__grid[data-tab="${$('.catalog__select').val()}"]`).fadeIn(300).css('display', 'grid');
+		});
+	}
 
 	/* Количество символов после запятой */
 	const getNumberLengthAfterComma = x => (x.toString().includes('.') ? x.toString().split('.').pop().length : 0);
@@ -66,47 +69,82 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	const sectionObserver = new IntersectionObserver(
-		(entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					initOdometer();
-				} else {
-					odometerElems.forEach((el, i) => {
-						od[i].update(0);
-					});
-				}
-			})
-		}
-	);
+	const sectionStatistics = document.querySelector(".statistics");
+	if (sectionStatistics) {
+		const sectionObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						initOdometer();
+					} else {
+						odometerElems.forEach((el, i) => {
+							od[i].update(0);
+						});
+					}
+				})
+			}
+		);
 
-	sectionObserver.observe(document.querySelector(".statistics"));
+		sectionObserver.observe(sectionStatistics);
 
-	initOdometer();
+		initOdometer();
+	}
 
 	/* Анимация появления заголовка на первом экране */
 	const heroTitle = document.querySelectorAll(".hero__title-part");
-	heroTitle.forEach((el, i) => {
-		setTimeout(() => {
-			el.classList.add("hero__title-part--fade");
-		}, 200 * i);
-	});
+	if (heroTitle && heroTitle.length > 0) {
+		heroTitle.forEach((el, i) => {
+			setTimeout(() => {
+				el.classList.add("hero__title-part--fade");
+			}, 200 * i);
+		});
+	}
 
 	/* Анимация появления преимуществ на первом экране */
 	const heroAdvantages = document.querySelectorAll(".advantages");
-	heroAdvantages.forEach((el, i) => {
-		setTimeout(() => {
-			el.classList.add("advantages--fade");
-		}, 200 * i + 400);
-	});
+	if (heroAdvantages && heroAdvantages.length > 0) {
+		heroAdvantages.forEach((el, i) => {
+			setTimeout(() => {
+				el.classList.add("advantages--fade");
+			}, 200 * i + 400);
+		});
+	}
 
 	/* Анимация появления хэдера */
 	const header = document.querySelector(".header");
-	header.classList.remove("header--hidden");
+	if (header) {
+		header.classList.remove("header--hidden");
+	}
 
 	/* Анимация появления секций */
 	const sections = document.querySelectorAll("section");
-	sections.forEach((el) => {
-		el.removeAttribute("invisible");
+	if (sections && sections.length > 0) {
+		sections.forEach((el) => {
+			el.removeAttribute("invisible");
+		});
+	}
+
+	/* Модалка для формы обратной связи */
+	const modalFeedback = new HystModal({
+		linkAttributeName: "data-hystmodal",
+		beforeOpen: function (modal) {
+			const product = $('.ss-item-type-text input');
+			console.log(product);
+			product.val($(".select2-selection__rendered").text());
+			console.log(product.val());
+		}
 	});
+
+	/* Галерея картинок в модалке */
+	var galleryItem = $(".article-block img");
+
+	if (galleryItem && galleryItem.length > 0) {
+		galleryItem.each(function () {
+			$(this).wrap('<a href="' + $(this).attr("src") + '" data-lightbox="image"></a>');
+		});
+
+		lightbox.option({
+			'showImageNumberLabel': false
+		})
+	}
 });
