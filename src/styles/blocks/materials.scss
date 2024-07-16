@@ -1,5 +1,6 @@
 .materials {
 	position: relative;
+	max-width: 476px;
 
 	&__title {
 		padding: 0 27px;
@@ -90,9 +91,12 @@
 			left: 20%;
 			width: 98px;
 			height: 138px;
+			background-image: url("../images/jumbo.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: right;
 			content: '';
 			border-radius: 5px;
-			background-color: $white;
 			transform: rotate(9deg);
 
 			@include min(600) {

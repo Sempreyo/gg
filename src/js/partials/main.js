@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
+	$(window).on("scroll", () => {
+		tabs.each(function () {
+			if ($(this)[0].getBoundingClientRect().top < $(window).height() / 3 && !$(this).hasClass("scrolled")) {
+				const tabsContentCurrent = $(this).parent().next();
+				$(this).addClass("accordion__tab--active scrolled");
+				tabsContentCurrent.stop().slideDown(300);
+			}
+		});
+	});
+
 	const select = $('.catalog__select');
 	const catalogContents = $('.catalog__grid');
 	if (select && select.length > 0) {
@@ -129,9 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		linkAttributeName: "data-hystmodal",
 		beforeOpen: function (modal) {
 			const product = $('.ss-item-type-text input');
-			console.log(product);
 			product.val($(".select2-selection__rendered").text());
-			console.log(product.val());
+
+			/* Маска для телефона */
+			$('input[type="tel"]').inputmask("+7 (999) 999 99 99", {
+				showMaskOnHover: false
+			});
 		}
 	});
 

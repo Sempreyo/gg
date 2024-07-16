@@ -1,9 +1,19 @@
 .footer {
+	$parent: &;
+
 	padding: 20px 0 0;
 	overflow: hidden;
 
 	@include min(t) {
 		padding: 67px 0 0;
+	}
+
+	&--only-button {
+		#{$parent} {
+			&__content {
+				min-width: 300px;
+			}
+		}
 	}
 
 	&__container {

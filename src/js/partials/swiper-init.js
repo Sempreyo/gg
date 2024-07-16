@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					slideChange: function(swiper) {
 						videos.forEach(el => {
 							el.pause();
-							el.currentTime = 0;
+							//el.currentTime = 0;
 						});
 					}
 				}

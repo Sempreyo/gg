@@ -26,13 +26,14 @@
 	}
 
 	&__right {
+		max-width: 600px;
 		width: 100%;
 	}
 
 	&__articles {
 		position: relative;
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 20px;
 
 		@include min(ti) {
@@ -44,6 +45,7 @@
 		position: absolute;
 		top: calc(41% + 50px);
 		right: -66px;
+		z-index: 1;
 		display: none;
 		max-width: 100px;
 		pointer-events: none;
@@ -53,8 +55,8 @@
 		}
 
 		@include min(tl) {
-			max-width: 144px;
-			right: -88px;
+			max-width: 125px;
+			right: -85px;
 		}
 	}
 
@@ -82,19 +84,12 @@
 		margin-top: 30px;
 
 		@include min(ti) {
-			margin-top: 97px;
-		}
-	}
-
-	&__accordion:nth-child(2) {
-		margin-top: 30px;
-
-		@include min(ti) {
-			margin-top: 8px;
+			margin-top: 20px;
 		}
 	}
 
 	&__materials {
+		margin-left: auto;
 		margin-top: 50px;
 
 		@include min(ti) {
