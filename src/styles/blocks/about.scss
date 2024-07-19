@@ -26,8 +26,11 @@
 	}
 
 	&__right {
-		max-width: 600px;
 		width: 100%;
+
+		@include min(ti) {
+			max-width: 600px;
+		}
 	}
 
 	&__articles {
@@ -89,10 +92,10 @@
 	}
 
 	&__materials {
-		margin-left: auto;
 		margin-top: 50px;
 
 		@include min(ti) {
+			margin-left: auto;
 			margin-top: 74px;
 		}
 	}

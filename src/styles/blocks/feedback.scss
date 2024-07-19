@@ -27,6 +27,21 @@
 		}
 	}
 
+	&__disclaimer {
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 12px;
+		margin-top: 30px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100px;
+			height: 1px;
+			margin-bottom: 10px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
 	.ss-form-title {
 		display: none;
 	}

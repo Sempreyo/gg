@@ -38,7 +38,7 @@
 		}
 
 		@include min(tl) {
-			top: 180px;
+			top: 100px;
 			max-width: 209px;
 		}
 	}
@@ -75,6 +75,10 @@
 			gap: 47px;
 			max-width: 290px;
 			padding-top: 9px;
+		}
+
+		@include min(d) {
+			max-width: 400px;
 		}
 	}
 
