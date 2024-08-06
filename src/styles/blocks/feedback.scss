@@ -50,7 +50,8 @@
 		display: none;
 	}
 
-	.ss-form-item input {
+	.ss-form-item input,
+	.ss-form-item textarea {
 		width: 100%;
 		border: 1px solid #fff;
 		padding: 10px 10px;
@@ -72,7 +73,12 @@
 		}
 	}
 
-	.ss-form-item-error input {
+	.ss-form-item textarea {
+		height: 120px;
+	}
+
+	.ss-form-item-error input,
+	.ss-form-item-error textarea {
 		border-color: $color-button;
 	}
 

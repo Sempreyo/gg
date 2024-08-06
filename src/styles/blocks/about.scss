@@ -51,7 +51,6 @@
 		z-index: 1;
 		display: none;
 		max-width: 100px;
-		pointer-events: none;
 
 		@include min(ti) {
 			display: block;
@@ -61,6 +60,14 @@
 			max-width: 125px;
 			right: -85px;
 		}
+
+		img {
+			transition: 0.3s ease;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 
 	&__peng-2 {
@@ -68,10 +75,17 @@
 		bottom: -90px;
 		left: -162px;
 		display: none;
-		pointer-events: none;
 
 		@include min(ti) {
 			display: block;
+		}
+
+		img {
+			transition: 0.3s ease;
+
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 	}
 

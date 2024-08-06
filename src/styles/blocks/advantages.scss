@@ -1,4 +1,7 @@
 .advantages {
+	$parent: &;
+
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 12px;
@@ -8,6 +11,18 @@
 
 	&--reverse {
 		transform: translateX(-40px);
+	}
+
+	a {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+
+		&:hover {
+			& + #{$parent}__icon svg {
+				transform: scale(-1, 1)
+			}
+		}
 	}
 
 	&--fade {
@@ -30,6 +45,7 @@
 
 		svg {
 			color: $white;
+			transition: 0.3s ease;
 		}
 	}
 
