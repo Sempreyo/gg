@@ -31,16 +31,17 @@
 		position: absolute;
 		bottom: 0;
 		left: 50%;
+		animation: pulse 6s linear 0.7s infinite;
 		transition: 0.3s ease;
+
+		&:hover {
+			opacity: 0.8;
+		}
 
 		@include min(tl) {
 			top: -30px;
 			left: 76%;
 			bottom: unset;
-		}
-
-		&:hover {
-			transform: scale(1.05);
 		}
 	}
 
@@ -109,10 +110,11 @@
 		}
 
 		img {
+			animation: pulse 6s linear infinite;
 			transition: 0.3s ease;
 
 			&:hover {
-				transform: scale(1.05);
+				opacity: 0.8;
 			}
 		}
 	}
