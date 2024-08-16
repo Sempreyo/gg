@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+	/* Аккордеон для правой части */
 	const tabs = $('.accordion__tab');
 
 	if (tabs && tabs.length > 0) {
@@ -26,6 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
+	/* Аккордеон для слайдера */
+	const solutionAccordion = $('.solutions__button');
+
+	if (solutionAccordion && solutionAccordion.length > 0) {
+		solutionAccordion.on('click', function () {
+			const tabsContentCurrent = $(this).next();
+
+			tabsContentCurrent.stop().slideToggle(300);
+		});
+	}
+
+	/* Кастомный селект */
 	const select = $('.catalog__select');
 	const catalogContents = $('.catalog__grid');
 	if (select && select.length > 0) {
