@@ -3,11 +3,32 @@
 
 	position: relative;
 
+	&:hover #{$parent}__image picture {
+		&:nth-child(1) {
+			opacity: 0;
+		}
+
+		&:nth-child(2) {
+			opacity: 1;
+		}
+	}
+
 	&__image {
+		position: relative;
 		width: 100%;
 		height: 287px;
 		border-radius: 32px;
 		overflow: hidden;
+
+		picture {
+			transition: 0.3s ease;
+
+			&:nth-child(2) {
+				position: absolute;
+				inset: 0;
+				opacity: 0;
+			}
+		}
 
 		img {
 			width: 100%;
@@ -40,6 +61,29 @@
 			& + #{$parent}__image img {
 				transform: scale(1.05);
 			}
+		}
+	}
+
+	&__button {
+		position: relative;
+		box-shadow: none;
+		width: auto;
+		padding: 12px 42px;
+		overflow: hidden;
+		margin-top: 20px;
+
+		&::before {
+			content: '';
+			width: 150%;
+			height: 200%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.5;
+			background: linear-gradient(to left, transparent 0%, $white 40%, $white 60%, transparent 100%);
+			transform: translate(-100%, -25%) rotate(10deg);
+			animation: flash 5s infinite;
+			pointer-events: none;
 		}
 	}
 }

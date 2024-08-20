@@ -28,13 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	/* Аккордеон для слайдера */
-	const solutionAccordion = $('.solutions__button');
+	const solutionAccordion = $('.solution-card__button');
+	const solutionContent = $('.solutions__wrapper--toggle');
 
 	if (solutionAccordion && solutionAccordion.length > 0) {
 		solutionAccordion.on('click', function () {
-			const tabsContentCurrent = $(this).next();
-
-			tabsContentCurrent.stop().slideToggle(300);
+			solutionContent.stop().slideToggle(300);
 		});
 	}
 
