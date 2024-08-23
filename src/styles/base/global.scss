@@ -206,3 +206,12 @@ textarea {
 	background-color: $color-text-addition;
 	color: $white;
 }
+
+/* Lightbox */
+.lb-outerContainer {
+	background-color: transparent;
+}
+
+.lightbox .lb-image {
+	border: 0;
+}
